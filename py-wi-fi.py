@@ -19,3 +19,4 @@ for net in result:
     print("Signal: ", net.signal)
     print("Auth:   ", net.auth)
     print("Cipher: ", net.cipher)
+
