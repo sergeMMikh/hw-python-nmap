@@ -32,7 +32,7 @@ args = (
 def nmap_it(ip: str):
     print(f'Scanning ip: {ip}')
     # nmap = nmap3.Nmap()
-    nmap = nmap3.NmapScanTechniques()
+    nmap = nmap3.Nmap()
     results = ()
     # pprint(nmap.nmap_version()["compiled_with"])
     # results = nmap.scan_top_ports("google.com")
@@ -42,6 +42,7 @@ def nmap_it(ip: str):
         results = nmap.nmap_command(args, ip)
     except Exception as e:
         print(e)
+        return
 
     pprint(results)
 
