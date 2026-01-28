@@ -43,10 +43,12 @@ def nmap_it(ip: str):
     except Exception as e:
         print(e)
 
-    ports=results[ip]["ports"]
+    pprint(results)
 
-    for port in ports:
-        print(port["portid"])
+    # ports=results[ip]["ports"]
+
+    # for port in ports:
+    #     print(port["portid"])
 
 if __name__ == '__main__':
     target_ip = sys.argv[1] if len(sys.argv) > 1 else "192.168.33.64"
