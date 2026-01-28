@@ -39,7 +39,7 @@ def nmap_it(ip: str):
     # results = nmap.nmap_tcp_scan(ip, args="-sV -sC -p-")
     # results = nmap.nmap_tcp_scan(ip, args=args)
     try:
-        results = nmap.nmap_command(args, ip)
+        results = nmap.nmap_tcp_scan(ip, args=args)
     except Exception as e:
         print(e)
         return
