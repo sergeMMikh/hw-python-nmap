@@ -1,6 +1,7 @@
 import nmap3
 import os
 import platform
+import sys
 
 from pprint import pprint
 
@@ -47,6 +48,7 @@ def nmap_it(ip: str):
         print(port["portid"])
 
 if __name__ == '__main__':
-    nmap_it(str(ip))
+    target_ip = sys.argv[1] if len(sys.argv) > 1 else "192.168.33.64"
+    nmap_it(target_ip)  
 else:
     print('Nope, not executed.')
