@@ -33,6 +33,7 @@ def nmap_it(ip: str):
     print(f'Scanning ip: {ip}')
     # nmap = nmap3.Nmap()
     nmap = nmap3.NmapScanTechniques()
+    results = ()
     # pprint(nmap.nmap_version()["compiled_with"])
     # results = nmap.scan_top_ports("google.com")
     # results = nmap.nmap_tcp_scan(ip, args="-sV -sC -p-")
