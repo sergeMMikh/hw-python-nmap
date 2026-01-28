@@ -3,7 +3,7 @@ import os
 from pprint import pprint
 
 
-# ip = "192.168.33.46"
+ip = "192.168.33.46"
 
 def tcp_scan_args():
     if os.name == "nt":
@@ -54,3 +54,8 @@ def nmap_it(ip: str):
 
     for port in ports:
         print(port["portid"])
+
+if __name__ == '__main__':
+    nmap_it(str(ip))
+else:
+    print('Nope, not executed.')
