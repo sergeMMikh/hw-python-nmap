@@ -20,11 +20,12 @@ def scan_net(network: str) -> list:
         if not isinstance(state_block, dict):
             continue
 
-        print(state_block)
-        print(state_block.get("state"))
+        # print(state_block)
+        # print(state_block.get("state"))
 
         if state_block.get("state") == "up":
             alive_hosts.append(key)
+            # print(key, value)
 
     # print(alive_hosts)
 

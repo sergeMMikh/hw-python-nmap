@@ -6,8 +6,9 @@ network = "192.168.1.0/24"
 
 if __name__ == '__main__':
     res = scan_net(network)
-    pprint(res)
+    # pprint(res)
     for host in res:
+        print()
         nmap_it(str(host))
 else:
     print('Nope, not executed.')

@@ -45,7 +45,7 @@ def nmap_it(target_ip: str) -> int:
     print(f"Scanning ip: {target_ip}")
 
     # не добавляем -sS/-sT, потому что nmap_tcp_scan сам добавит TCP scan.
-    args = "-sV -p- --reason --version-all -T3"
+    args = "--reason -T3"
 
     nmap = nmap3.NmapScanTechniques()
 
